@@ -1,5 +1,3 @@
-// script.js
-
 const cards = document.querySelectorAll('.card');
 const resultContainer = document.getElementById('result');
 const resultMessage = document.getElementById('resultMessage');
@@ -62,3 +60,31 @@ function backToMain() {
   window.location.href = "index.html";
 }
 
+
+let selectedCard = null;
+
+function selectCard(cardIndex) {
+  selectedCard = cards[cardIndex];
+  cards.forEach((card, index) => {
+    if (index === cardIndex) {
+      card.classList.add('selected');
+    } else {
+      card.classList.remove('selected');
+    }
+  });
+}
+
+function showResult() {
+  if (selectedCard) {
+    const resultContainer = document.querySelector('.result-container');
+    const selectedCardElement = document.createElement('div');
+    selectedCardElement.classList.add('selected-card');
+    selectedCardElement.innerHTML = `
+      <img src="${selectedCard.imgSrc}" alt="${selectedCard.title}">
+      <h2>${selectedCard.title}</h2>
+      <p>${selectedCard.description}</p>
+    `;
+    resultContainer.appendChild(selectedCardElement);
+    resultContainer.style.display = 'flex';
+  }
+}
