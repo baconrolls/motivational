@@ -1,13 +1,16 @@
-function revealCard(cardNumber) {
-  // Replace the cardNumber with the actual content or activity for each card.
-  let positiveActivities = {
-    1: "Go for a nature walk and appreciate the beauty around you.",
-    2: "Try a new hobby or activity that interests you.",
-    // Add more positive activities for each card number.
-  };
-
-  let resultText = positiveActivities[cardNumber];
-  if (resultText) {
-    window.location.href = `result.html?activity=${encodeURIComponent(resultText)}`;
+function revealAnswer(card) {
+  let answer;
+  switch (card) {
+    case 'card1':
+      answer = "You should try yoga to relax and destress.";
+      break;
+    case 'card2':
+      answer = "Go for a walk in nature to rejuvenate your mind.";
+      break;
+    // Add more cases for other cards here
+    default:
+      answer = "Select a card to reveal the positive activity.";
+      break;
   }
+  document.getElementById('result').textContent = answer;
 }
