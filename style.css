@@ -89,3 +89,15 @@ h1 {
 .back-button:hover {
   background-color: #ff6347;
 }
+
+/* Media Query for Responsive Layout */
+
+@media screen and (max-width: 768px) {
+  .deck {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 80%;
+  }
+}
