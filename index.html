@@ -1,44 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Skin Quiz: What's Your Skincare Personality?</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Positive Things to Do</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <div class="question" id="question1">
-      <h1>Question 1:</h1>
-      <p>What's your skin type?</p>
-      <div class="options">
-        <button onclick="nextQuestion('A')">A. Dry</button>
-        <button onclick="nextQuestion('B')">B. Oily</button>
-        <button onclick="nextQuestion('C')">C. Combination</button>
-      </div>
+    <h1>Positive Things to Do</h1>
+    <p>Choose a card to reveal a positive activity:</p>
+    <div class="cards">
+      <div class="card" onclick="revealCard(0)">Card 1</div>
+      <div class="card" onclick="revealCard(1)">Card 2</div>
+      <div class="card" onclick="revealCard(2)">Card 3</div>
+      <!-- Add more cards as needed -->
     </div>
-
-     <div class="question" id="question1">
-      <h1>Question 2:</h1>
-      <p>What's your skin cas?</p>
-      <div class="options">
-        <button onclick="nextQuestion('A')">A. Dry</button>
-        <button onclick="nextQuestion('B')">B. Oily</button>
-        <button onclick="nextQuestion('C')">C. Combination</button>
-      </div>
-    </div>
-
-    <!-- Add the rest of the question divs here -->
-
-    <div class="loading" id="loading">
-      <img src="loading.gif" alt="Loading">
-      <p>Loading...</p>
-    </div>
-
-    <div class="result" id="result">
-      <h1>Your Skincare Personality:</h1>
+    <div class="result">
       <p id="resultText"></p>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
