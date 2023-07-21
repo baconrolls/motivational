@@ -54,7 +54,12 @@ p {
 }
 
 /* Card Styles */
-
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 .deck {
   display: flex;
   justify-content: center;
