@@ -35,11 +35,3 @@ function backToMain() {
   window.location.href = "index.html";
 }
 
-  // Hide the result container
-  resultContainer.style.display = "none";
-
-  // Show all cards again
-  cards.forEach((card) => {
-    card.style.display = "block";
-  });
-}
