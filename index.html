@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +12,7 @@
 <body>
   <div class="container">
     <h1>Tarot Game: Select a Card</h1>
-    <div class="cards-container">
+    <div class="deck">
       <div class="card" onclick="showCard(1)">
         <img src="https://i.giphy.com/media/3y0oCOkdKKRi0/giphy.webp" alt="Card 1">
       </div>
@@ -22,8 +23,12 @@
         <img src="https://i.giphy.com/media/3y0oCOkdKKRi0/giphy.webp" alt="Card 3">
       </div>
     </div>
+    <div class="result-container" id="resultContainer">
+      <p id="resultMessage"></p>
+    </div>
   </div>
   <script src="script.js"></script>
 </body>
 
 </html>
+
