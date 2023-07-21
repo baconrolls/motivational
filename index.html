@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Who Are You on Vacation Quiz</title>
+  <title>Skin Quiz: What's Your Skincare Personality?</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="question" id="question1">
-    <!-- Question 1 content -->
-  </div>
+  <div class="container">
+    <div class="question" id="question1">
+      <h1>Question 1:</h1>
+      <p>What's your skin type?</p>
+      <div class="options">
+        <button onclick="nextQuestion('A')">A. Dry</button>
+        <button onclick="nextQuestion('B')">B. Oily</button>
+        <button onclick="nextQuestion('C')">C. Combination</button>
+      </div>
+    </div>
 
-  <!-- Add the rest of the question divs here -->
+    <!-- Add the rest of the question divs here -->
 
-  <div class="loading" id="loading">
-    <img src="https://i.giphy.com/media/3y0oCOkdKKRi0/giphy.webp" alt="Loading">
-    <p>Loading...</p>
-  </div>
+    <div class="loading" id="loading">
+      <img src="loading.gif" alt="Loading">
+      <p>Loading...</p>
+    </div>
 
-  <div class="result" id="result">
-    <h2>Your Vacation Personality:</h2>
-    <p id="resultText"></p>
+    <div class="result" id="result">
+      <h1>Your Skincare Personality:</h1>
+      <p id="resultText"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
