@@ -16,7 +16,7 @@ function shuffleCards() {
 
 function revealCard(cardNumber) {
   // Hide the deck and show the result container
-  document.getElementById('deck').style.display = 'none';
+  document.getElementById('deck').style.display = '';
   resultContainer.style.display = 'block';
 
   // Determine the result based on the card number
