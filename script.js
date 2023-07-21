@@ -1,34 +1,32 @@
-function showCard(cardNumber) {
-  const resultContainer = document.getElementById("resultContainer");
-  const resultMessage = document.getElementById("resultMessage");
+// script.js
 
-  // Hide all cards
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
-    card.style.display = "none";
-  });
+const cards = document.querySelectorAll('.card');
+const resultContainer = document.getElementById('result');
+const resultMessage = document.getElementById('resultMessage');
 
-  // Show the selected card
-  const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
-  selectedCard.style.display = "block";
+function revealCard(cardNumber) {
+  // Hide the deck and show the result container
+  document.getElementById('deck').style.display = 'none';
+  resultContainer.style.display = 'block';
 
-  // Show the result message based on the selected card
-  switch (cardNumber) {
-    case 1:
-      resultMessage.textContent = "You are adventurous and seeking new experiences!";
-      break;
-    case 2:
-      resultMessage.textContent = "You are a creative and imaginative person!";
-      break;
-    case 3:
-      resultMessage.textContent = "You are wise and have a strong intuition!";
-      break;
-    default:
-      resultMessage.textContent = "Select a card to reveal your result!";
+  // Determine the result based on the card number
+  let result;
+  if (cardNumber === 1) {
+    result = "You are destined for a relaxing beach vacation!";
+  } else if (cardNumber === 2) {
+    result = "You are meant to explore a vibrant city!";
+  } else if (cardNumber === 3) {
+    result = "You are going on an adventurous mountain trip!";
   }
 
-  // Show the result container
-  resultContainer.style.display = "block";
+  // Display the result message
+  resultMessage.textContent = result;
+}
+
+function showDeck() {
+  // Hide the result container and show the deck again
+  document.getElementById('deck').style.display = 'flex';
+  resultContainer.style.display = 'none';
 }
 
 function backToMain() {
