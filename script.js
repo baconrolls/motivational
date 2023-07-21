@@ -4,6 +4,16 @@ const cards = document.querySelectorAll('.card');
 const resultContainer = document.getElementById('result');
 const resultMessage = document.getElementById('resultMessage');
 
+function shuffleCards() {
+  // Shuffle the cards array using the Fisher-Yates algorithm
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = cards[i].innerHTML;
+    cards[i].innerHTML = cards[j].innerHTML;
+    cards[j].innerHTML = temp;
+  }
+}
+
 function revealCard(cardNumber) {
   // Hide the deck and show the result container
   document.getElementById('deck').style.display = 'none';
@@ -28,6 +38,10 @@ function showDeck() {
   document.getElementById('deck').style.display = 'flex';
   resultContainer.style.display = 'none';
 }
+
+// Shuffle the cards when the page loads
+shuffleCards();
+
 
 function backToMain() {
   window.location.href = "index.html";
