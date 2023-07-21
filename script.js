@@ -30,3 +30,16 @@ function showCard(cardNumber) {
   // Show the result container
   resultContainer.style.display = "block";
 }
+
+function backToMain() {
+  const resultContainer = document.getElementById("resultContainer");
+  const cards = document.querySelectorAll(".card");
+
+  // Hide the result container
+  resultContainer.style.display = "none";
+
+  // Show all cards again
+  cards.forEach((card) => {
+    card.style.display = "block";
+  });
+}
