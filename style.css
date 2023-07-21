@@ -54,14 +54,6 @@ p {
 }
 
 /* Card Styles */
-.cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Rest of the CSS code */
 
 .deck {
   display: flex;
