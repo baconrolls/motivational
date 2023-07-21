@@ -1,26 +1,20 @@
-let scoreA = 0;
-let scoreB = 0;
-let scoreC = 0;
 let currentQuestion = 1;
+let answers = [];
 
-function selectAnswer(answer) {
-  if (answer === 'A') {
-    scoreA++;
-  } else if (answer === 'B') {
-    scoreB++;
-  } else if (answer === 'C') {
-    scoreC++;
-  }
+function showQuestion(questionNumber) {
+  document.querySelectorAll('.question').forEach((question) => {
+    question.style.display = 'none';
+  });
 
-  showNextQuestion();
+  document.querySelector(`#question${questionNumber}`).style.display = 'block';
 }
 
-function showNextQuestion() {
-  document.getElementById('question' + currentQuestion).style.display = 'none';
-  currentQuestion++;
+function nextQuestion(answer) {
+  answers.push(answer);
 
-  if (currentQuestion <= 10) {
-    document.getElementById('question' + currentQuestion).style.display = 'block';
+  if (currentQuestion < 10) {
+    currentQuestion++;
+    showQuestion(currentQuestion);
   } else {
     showResult();
   }
@@ -28,20 +22,24 @@ function showNextQuestion() {
 
 function showResult() {
   document.getElementById('loading').style.display = 'block';
+
   setTimeout(() => {
-    document.getElementById('loading').style.display = 'none';
+    const resultText = document.getElementById('resultText');
+    const totalA = answers.filter((answer) => answer === 'A').length;
+    const totalB = answers.filter((answer) => answer === 'B').length;
+    const totalC = answers.filter((answer) => answer === 'C').length;
 
-    let resultText = '';
-
-    if (scoreA >= scoreB && scoreA >= scoreC) {
-      resultText = 'You are a Beach Resort Lover! 🏖️';
-    } else if (scoreB >= scoreA && scoreB >= scoreC) {
-      resultText = 'You are an Adventure Seeker in the Mountains! ⛰️';
+    if (totalA > totalB && totalA > totalC) {
+      resultText.innerText = 'Your Skincare Personality: You have Dry Skin!';
+    } else if (totalB > totalA && totalB > totalC) {
+      resultText.innerText = 'Your Skincare Personality: You have Oily Skin!';
     } else {
-      resultText = 'You are a Cultural City Explorer! 🏙️';
+      resultText.innerText = 'Your Skincare Personality: You have Combination Skin!';
     }
 
-    document.getElementById('resultText').innerText = resultText;
+    document.getElementById('loading').style.display = 'none';
     document.getElementById('result').style.display = 'block';
   }, 2000);
 }
+
+showQuestion(currentQuestion);
