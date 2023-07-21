@@ -23,7 +23,7 @@ h1 {
 .deck {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: ;
   margin-bottom: 20px;
 }
 
