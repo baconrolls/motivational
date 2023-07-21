@@ -1,29 +1,32 @@
-function showCard(selectedCard) {
-  const cards = document.querySelectorAll('.card');
-  const resultContainer = document.getElementById('resultContainer');
-  const resultMessage = document.getElementById('resultMessage');
-  
-  cards.forEach((card, index) => {
-    if (index === selectedCard - 1) {
-      card.classList.add('active');
-      resultContainer.style.display = 'block';
-      resultMessage.textContent = getResultMessage(selectedCard);
-    } else {
-      card.classList.remove('active');
-    }
-  });
-}
+function showCard(cardNumber) {
+  const resultContainer = document.getElementById("resultContainer");
+  const resultMessage = document.getElementById("resultMessage");
 
-function getResultMessage(selectedCard) {
-  // Add your result messages for each card here
-  switch (selectedCard) {
+  // Hide all cards
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    card.style.display = "none";
+  });
+
+  // Show the selected card
+  const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
+  selectedCard.style.display = "block";
+
+  // Show the result message based on the selected card
+  switch (cardNumber) {
     case 1:
-      return "You chose Card 1! This represents good luck and positive energy.";
+      resultMessage.textContent = "You are adventurous and seeking new experiences!";
+      break;
     case 2:
-      return "You chose Card 2! This symbolizes a period of transition and change.";
+      resultMessage.textContent = "You are a creative and imaginative person!";
+      break;
     case 3:
-      return "You chose Card 3! This signifies a time of new beginnings and opportunities.";
+      resultMessage.textContent = "You are wise and have a strong intuition!";
+      break;
     default:
-      return "";
+      resultMessage.textContent = "Select a card to reveal your result!";
   }
+
+  // Show the result container
+  resultContainer.style.display = "block";
 }
