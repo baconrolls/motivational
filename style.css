@@ -77,12 +77,15 @@ h1 {
 }
 
 .back-button {
+  text-transform:upercase;
   padding: 10px 20px;
   border: none;
   background-color: #ff7f50;
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+  gap:20px;
+  flex-direction: column;
 }
 
 .back-button:hover {
