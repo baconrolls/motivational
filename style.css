@@ -77,10 +77,10 @@ p{
   color: #000;
   text-align:center;
 }
-
-    /* Add this CSS code to center the "Back to Main" button */
+ /* Add this CSS code to center the "Back to Main" button */
     #resultContainer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      text-align: center;}
+a{text-decoration:none}
