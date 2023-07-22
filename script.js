@@ -40,17 +40,16 @@ function backToMain() {
 // Show the "Back to Main" button on the result page
   document.getElementById("back-button").style.display = "block";
 
-  
-// Function to shuffle the cards randomly
-function shuffleCards() {
-  const cardsContainer = document.querySelector(".card-container");
-  for (let i = cardsContainer.children.length; i >= 0; i--) {
-    cardsContainer.appendChild(cardsContainer.children[Math.random() * i | 0]);
-  }
-}
+   // Function to shuffle the cards randomly
+    function shuffleCards() {
+      const cardsContainer = document.querySelector(".card-container");
+      for (let i = cardsContainer.children.length; i >= 0; i--) {
+        cardsContainer.appendChild(cardsContainer.children[Math.random() * i | 0]);
+      }
+    }
 
-// Call the function to shuffle the cards when the page loads
-window.addEventListener("load", shuffleCards);
+    // Call the function to shuffle the cards when the page loads
+    window.addEventListener("load", shuffleCards);
 
   // Hide the result container
   resultContainer.style.display = "none";
