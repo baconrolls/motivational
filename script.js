@@ -58,12 +58,6 @@ function revealCard(cardNumber) {
   resultMessage.textContent = result;
 }
 
-function showDeck() {
-  // Hide the result container and show the deck again
-  document.getElementById('deck').style.display = 'flex';
-  resultContainer.style.display = 'none';
-}
-
 // Shuffle the cards when the page loads
 shuffleCards();
 
