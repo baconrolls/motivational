@@ -53,3 +53,17 @@ shuffleCards();
 function backToMain() {
   window.location.href = "index.html";
 }
+
+// Event listener for the card click event
+cards.forEach((card, index) => {
+  card.addEventListener('click', () => {
+    // Remove the "selected" class from all cards
+    cards.forEach(c => c.classList.remove('selected'));
+
+    // Add the "selected" class to the clicked card
+    card.classList.add('selected');
+
+    // Show the result and hide the index title, and pass the selected card to the revealCard function
+    revealCard(index + 1);
+  });
+});
