@@ -62,3 +62,8 @@
   animation: pulse 0.3s;
 }
 
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
