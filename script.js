@@ -82,7 +82,6 @@
       cards.forEach((card) => {
         card.style.display = "block";
           // Reattach the showCard function to the card images
-    cards.forEach((card, index) => {
-      card.setAttribute("onclick")`);
+      card.setAttribute("onclick");
       });
     }
