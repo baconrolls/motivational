@@ -83,6 +83,6 @@
         card.style.display = "block";
           // Reattach the showCard function to the card images
     cards.forEach((card, index) => {
-      card.setAttribute("onclick", `showCard(${index + 1})`);
+      card.setAttribute("onclick")`);
       });
     }
