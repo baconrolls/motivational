@@ -1,9 +1,6 @@
 /* Rest of the CSS code */
 
 .deck {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .card-container {
       display: grid;
