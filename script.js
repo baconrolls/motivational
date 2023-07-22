@@ -44,14 +44,6 @@ function shuffleCards() {
 // Call the function to shuffle the cards when the page loads
 window.addEventListener("load", shuffleCards);
 
-// Rest of the code remains the same
-function showCard(cardNumber) {
-  // ... (rest of the code)
-}
-
-function backToMain() {
-  // ... (rest of the code)
-}
 
 
 function backToMain() {
