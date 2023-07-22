@@ -1,6 +1,8 @@
 function showCard(cardNumber) {
   const resultContainer = document.getElementById("resultContainer");
   const resultMessage = document.getElementById("resultMessage");
+  const backButton = document.querySelector('.back-button');
+
 
   // Hide all cards
   const cards = document.querySelectorAll(".card");
