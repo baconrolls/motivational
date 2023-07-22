@@ -24,6 +24,20 @@ function revealCard(cardNumber) {
   resultContainer.innerHTML = card.outerHTML;
 }
 
+// Event listener for the card click event
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', () => {
+    // Remove the "selected" class from all cards
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+
+    // Add the "selected" class to the clicked card
+    card.classList.add('selected');
+
+    // Show the result and hide the index title, and pass the selected card to the showResult function
+    showResult(card);
+  });
+});
+
   // Determine the result based on the card number
   let result;
   if (cardNumber === 1) {
