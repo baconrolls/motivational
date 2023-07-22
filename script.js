@@ -32,7 +32,27 @@ function showCard(cardNumber) {
   // Show the result container
   resultContainer.style.display = "block";
 }
- 
+
+// Function to shuffle the cards randomly
+function shuffleCards() {
+  const cardsContainer = document.querySelector(".card-container");
+  for (let i = cardsContainer.children.length; i >= 0; i--) {
+    cardsContainer.appendChild(cardsContainer.children[Math.random() * i | 0]);
+  }
+}
+
+// Call the function to shuffle the cards when the page loads
+window.addEventListener("load", shuffleCards);
+
+// Rest of the code remains the same
+function showCard(cardNumber) {
+  // ... (rest of the code)
+}
+
+function backToMain() {
+  // ... (rest of the code)
+}
+
 
 function backToMain() {
   const resultContainer = document.getElementById("resultContainer");
