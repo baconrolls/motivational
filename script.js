@@ -45,15 +45,21 @@ function shuffleCards() {
 window.addEventListener("load", shuffleCards);
 
 
-
 function backToMain() {
   const resultContainer = document.getElementById("resultContainer");
   const cards = document.querySelectorAll(".card");
+  const backButton = document.getElementById("back-button");
 
-  // Hide the "Back to Main" button on the main page
-  document.getElementById("back-button").style.display = "none";
-// Show the "Back to Main" button on the result page
-  document.getElementById("back-button").style.display = "block";
+  // Show the "Back to Main" button only when the result container is visible
+  backButton.style.display = resultContainer.style.display === "block" ? "block" : "none";
+
+  // Toggle the visibility of the result container and cards
+  resultContainer.style.display = resultContainer.style.display === "none" ? "block" : "none";
+  cards.forEach((card) => {
+    card.style.display = card.style.display === "none" ? "block" : "none";
+  });
+}
+
 
   // Hide the result container
   resultContainer.style.display = "none";
