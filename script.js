@@ -1,8 +1,9 @@
 // script.js
+
 const cards = document.querySelectorAll('.card');
 const resultContainer = document.querySelector('.result-container');
 const selectedCard = document.getElementById('selectedCard');
-const resultMessage = document.getElementById('resultMessage');
+const resultMessage = document.getElementById('result-text');
 const indexTitle = document.getElementById('index-title');
 
 function shuffleCards() {
@@ -54,7 +55,7 @@ function revealCard(cardNumber) {
   }
 
   // Display the result message
-  resultMessage.innerHTML = result;
+  resultMessage.textContent = result;
 }
 
 function showDeck() {
@@ -66,10 +67,6 @@ function showDeck() {
 // Shuffle the cards when the page loads
 shuffleCards();
 
-function backToMain() {
-  window.location.href = "index.html";
-}
-
 // Event listener for the card click event
 cards.forEach((card, index) => {
   card.addEventListener('click', () => {
@@ -79,7 +76,15 @@ cards.forEach((card, index) => {
     // Add the "selected" class to the clicked card
     card.classList.add('selected');
 
-    // Show the result and hide the index title, and pass the selected card to the revealCard function
+    // Show the result and hide the index title, and pass the selected card to the showResult function
     revealCard(index + 1);
   });
 });
+
+function backToMain() {
+  // Hide the result container and show the deck again
+  document.getElementById('deck').style.display = 'flex';
+  indexTitle.style.display = 'block';
+  resultContainer.style.display = 'none';
+}
+
