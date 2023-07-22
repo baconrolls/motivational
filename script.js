@@ -1,3 +1,4 @@
+// JavaScript
 const cards = document.querySelectorAll('.card');
 const resultContainer = document.querySelector('.result-container');
 const selectedCard = document.getElementById('selectedCard');
@@ -62,8 +63,8 @@ cards.forEach((card, index) => {
     // Add the "selected" class to the clicked card
     card.classList.add('selected');
 
-    // Show the result and hide the index title, and pass the selected card to the showResult function
-    revealCard(index + 1);
+    // Show the result and hide the index title, and pass the selected card to the revealCard function
+    revealCard(index);
   });
 });
 
