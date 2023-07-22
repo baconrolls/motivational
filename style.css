@@ -1,33 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Rest of the CSS code */
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarot Game</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+.deck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-<body>
-  <div class="container">
-    <h1>Tarot Game: Select a Card</h1>
-    <div class="deck">
-      <div class="card" onclick="showCard(1)">
-        <img src="card1.jpg" alt="Card 1">
-      </div>
-      <div class="card" onclick="showCard(2)">
-        <img src="card2.jpg" alt="Card 2">
-      </div>
-      <div class="card" onclick="showCard(3)">
-        <img src="card3.jpg" alt="Card 3">
-      </div>
-    </div>
-    <div class="result-container" id="resultContainer">
-      <p id="resultMessage"></p>
-      <button onclick="backToMain()">Back to Main</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+.card {
+  width: 150px;
+  height: 225px;
+  margin: 0 10px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
-</html>
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.active {
+  transform: translateY(-10px);
+}
