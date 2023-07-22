@@ -3,7 +3,6 @@ function showCard(cardNumber) {
   const resultMessage = document.getElementById("resultMessage");
   const backButton = document.querySelector('.back-button');
 
-
   // Hide all cards
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -43,8 +42,6 @@ function shuffleCards() {
 
 // Call the function to shuffle the cards when the page loads
 window.addEventListener("load", shuffleCards);
-
-
 
   // Hide the result container
   resultContainer.style.display = "none";
