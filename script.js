@@ -42,7 +42,7 @@ function backToMain() {
 
    // Function to shuffle the cards randomly
     function shuffleCards() {
-      const cardsContainer = document.querySelector(".container");
+      const cardsContainer = document.querySelector(".card-container");
       for (let i = cardsContainer.children.length; i >= 0; i--) {
         cardsContainer.appendChild(cardsContainer.children[Math.random() * i | 0]);
       }
