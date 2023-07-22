@@ -45,10 +45,6 @@ function shuffleCards() {
 window.addEventListener("load", shuffleCards);
 
 
-function backToMain() {
-  const resultContainer = document.getElementById("resultContainer");
-  const cards = document.querySelectorAll(".card");
-  const backButton = document.getElementById("back-button");
 
   // Show the "Back to Main" button only when the result container is visible
   backButton.style.display = resultContainer.style.display === "block" ? "block" : "none";
