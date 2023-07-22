@@ -2,6 +2,7 @@
 
 const cards = document.querySelectorAll('.card');
 const resultContainer = document.querySelector('.result-container');
+const selectedCard = document.getElementById('selectedCard');
 const resultMessage = document.getElementById('resultMessage');
 const indexTitle = document.getElementById('index-title');
 
@@ -20,6 +21,9 @@ function revealCard(cardNumber) {
   document.getElementById('deck').style.display = 'none';
   indexTitle.style.display = 'none';
   resultContainer.style.display = 'flex';
+
+  // Display the selected card in the result container
+  selectedCard.innerHTML = cards[cardNumber - 1].outerHTML;
 
   // Determine the result based on the card number
   let result;
