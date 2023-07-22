@@ -14,9 +14,13 @@ function shuffleCards() {
 
 function revealCard(cardNumber) {
   // Hide the deck and show the result container
-  document.getElementById('deck').style.display = 'none';
+  document.getElementById('deck').style.display = '';
   indexTitle.style.display = 'none';
   resultContainer.style.display = 'flex';
+  
+  // Display the selected card in the result container
+  resultContainer.innerHTML = card.outerHTML;
+}
 
   // Determine the result based on the card number
   let result;
