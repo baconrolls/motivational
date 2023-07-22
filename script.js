@@ -1,5 +1,4 @@
-
-    // Array of random messages for each card
+// Array of random messages for each card
     const messages = [
   "Practice daily affirmations to boost your self-confidence.",
   "Spend time in nature and appreciate the beauty around you.",
