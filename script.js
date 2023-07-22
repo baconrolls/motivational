@@ -81,7 +81,8 @@
       // Show all cards again
       cards.forEach((card) => {
         card.style.display = "block";
-          // Restore the onclick event for the card images
-      card.setAttribute("onclick", "showCard(this)");
+          // Reattach the showCard function to the card images
+    cards.forEach((card, index) => {
+      card.setAttribute("onclick", `showCard(${index + 1})`);
       });
     }
