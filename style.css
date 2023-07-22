@@ -75,7 +75,7 @@ p{
 }
 /* Other existing styles */
 
-#resultMessage, button {
+#resultMessage, button#back-button.back-button {
   color: #000;
   text-align:center;
 }
