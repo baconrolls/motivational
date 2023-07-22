@@ -1,8 +1,9 @@
+// script.js
+
 const cards = document.querySelectorAll('.card');
-const resultContainer = document.getElementById('result');
+const resultContainer = document.querySelector('.result-container');
 const resultMessage = document.getElementById('resultMessage');
 const indexTitle = document.getElementById('index-title');
-
 
 function shuffleCards() {
   // Shuffle the cards array using the Fisher-Yates algorithm
@@ -16,27 +17,9 @@ function shuffleCards() {
 
 function revealCard(cardNumber) {
   // Hide the deck and show the result container
-  document.getElementById('deck').style.display = '';
+  document.getElementById('deck').style.display = 'none';
   indexTitle.style.display = 'none';
   resultContainer.style.display = 'flex';
-  
-  // Display the selected card in the result container
-  resultContainer.innerHTML = card.outerHTML;
-}
-
-// Event listener for the card click event
-document.querySelectorAll('.card').forEach(card => {
-  card.addEventListener('click', () => {
-    // Remove the "selected" class from all cards
-    document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
-
-    // Add the "selected" class to the clicked card
-    card.classList.add('selected');
-
-    // Show the result and hide the index title, and pass the selected card to the showResult function
-    showResult(card);
-  });
-});
 
   // Determine the result based on the card number
   let result;
@@ -46,14 +29,11 @@ document.querySelectorAll('.card').forEach(card => {
     result = "Spread Kindness: Perform random acts of kindness for others, whether it's helping a stranger, complimenting a friend, or volunteering for a cause you care about. Kindness not only benefits others but also brings joy to your own heart.";
   } else if (cardNumber === 3) {
     result = "Stay Active: Engage in regular physical activity that you enjoy, whether it's going for a walk, dancing, or playing a sport. Exercise releases endorphins, which can boost your mood and overall well-being.";
-  }
-  else if (cardNumber === 4) {
+  } else if (cardNumber === 4) {
     result = "Connect with Loved Ones: Spend quality time with family and friends, either in person or through virtual means. Building and maintaining strong relationships can provide emotional support and a sense of belonging.";
-  }
-  else if (cardNumber === 5) {
+  } else if (cardNumber === 5) {
     result = "Practice Mindfulness: Take time to be present in the moment and practice mindfulness. Whether it's through meditation, deep breathing, or mindful activities like coloring or gardening, being mindful can reduce stress and increase feelings of calmness.";
-  }
-  else if (cardNumber === 6) {
+  } else if (cardNumber === 6) {
     result = "Pursue Your Passions: Engage in activities that bring you joy and fulfillment. Whether it's pursuing a hobby, learning something new, or working towards a personal goal, following your passions can lead to a greater sense of purpose and satisfaction.";
   }
 
@@ -70,9 +50,6 @@ function showDeck() {
 // Shuffle the cards when the page loads
 shuffleCards();
 
-
 function backToMain() {
   window.location.href = "index.html";
 }
-
-
