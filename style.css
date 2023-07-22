@@ -1,65 +1,33 @@
-/* style.css */
+<!DOCTYPE html>
+<html lang="en">
 
-/* Add your custom CSS for the deck and result container here */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarot Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-.deck {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
+<body>
+  <div class="container">
+    <h1>Tarot Game: Select a Card</h1>
+    <div class="deck">
+      <div class="card" onclick="showCard(1)">
+        <img src="card1.jpg" alt="Card 1">
+      </div>
+      <div class="card" onclick="showCard(2)">
+        <img src="card2.jpg" alt="Card 2">
+      </div>
+      <div class="card" onclick="showCard(3)">
+        <img src="card3.jpg" alt="Card 3">
+      </div>
+    </div>
+    <div class="result-container" id="resultContainer">
+      <p id="resultMessage"></p>
+      <button onclick="backToMain()">Back to Main</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 
-.card {
-  /* Add your card styling here */
-  width: 150px;
-  height: 200px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.card.selected {
-  /* Add your selected card styling here */
-  background-color: #ffcc00;
-  transform: scale(1.1);
-}
-
-.result-container {
-  /* Add your result container styling here */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.result-container #resultMessage {
-  /* Add your result message styling here */
-  font-size: 20px;
-  text-align: center;
-}
-
-.back-button {
-  /* Add your back button styling here */
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.back-button:hover {
-  background-color: #555;
-}
+</html>
