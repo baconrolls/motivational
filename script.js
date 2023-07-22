@@ -81,5 +81,7 @@
       // Show all cards again
       cards.forEach((card) => {
         card.style.display = "block";
+          // Restore the onclick event for the card images
+      card.setAttribute("onclick", "showCard(this)");
       });
     }
