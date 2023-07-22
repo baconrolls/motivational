@@ -30,30 +30,7 @@
 ];
 
 
-    // Function to shuffle the cards randomly
-    function shuffleCards() {
-      const cardsContainer = document.querySelector(".card-container");
-      const cards = Array.from(cardsContainer.children);
-
-      for (let i = cards.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [cards[i], cards[j]] = [cards[j], cards[i]];
-      }
-
-      cards.forEach((card) => {
-        cardsContainer.appendChild(card);
-      });
-    }
-
-    // Call the function to shuffle the cards when the page loads
-    window.addEventListener("load", shuffleCards);
-
-    function showCard(cardNumber) {
-      const resultContainer = document.getElementById("resultContainer");
-      const resultMessage = document.getElementById("resultMessage");
-
-        // Hide Cards
-      function hideCards() {
+    function hideCards() {
       const cards = document.querySelectorAll(".card");
       cards.forEach((card, index) => {
         card.style.display = "none";
@@ -83,12 +60,12 @@
       const resultContainer = document.getElementById("resultContainer");
       const cards = document.querySelectorAll(".card");
 
+      // Hide the result container
       resultContainer.style.display = "none";
 
       cards.forEach((card) => {
-        const cardNumber = card.getAttribute("data-card-number");
         card.style.display = "block";
-        card.setAttribute("onclick", `showCard(${cardNumber})`); // Restore the onclick event with the correct card number
+        card.setAttribute("onclick", `showCard(${card.getAttribute("data-card-number")})`); // Restore the onclick event with the correct card number
       });
     }
 
