@@ -46,12 +46,6 @@ function revealCard(cardNumber) {
   // Display the result message
   resultMessage.textContent = result;
 }
-function displaySelectedCard() {
-  // Display the selected card in the result container
-  const selectedCard = cards[selectedCardNumber - 1].cloneNode(true);
-  selectedCardContainer.innerHTML = '';
-  selectedCardContainer.appendChild(selectedCard);
-}
 
 function showDeck() {
   // Hide the result container and show the deck again
