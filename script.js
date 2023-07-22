@@ -52,16 +52,23 @@
       const resultContainer = document.getElementById("resultContainer");
       const resultMessage = document.getElementById("resultMessage");
 
-      // Hide all cards
+        // Hide Cards
+      function hideCards() {
       const cards = document.querySelectorAll(".card");
-      cards.forEach((card) => {
+      cards.forEach((card, index) => {
         card.style.display = "none";
-          // Remove the onclick event from the card images
-        card.removeAttribute("onclick");
+        card.setAttribute("data-card-number", index + 1); // Store card number as a data attribute
       });
+    }
+
+    function showCard(cardNumber) {
+      const resultContainer = document.getElementById("resultContainer");
+      const resultMessage = document.getElementById("resultMessage");
+
+      hideCards();
 
       // Show the selected card
-      const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
+      const selectedCard = document.querySelector(`.card[data-card-number="${cardNumber}"]`);
       selectedCard.style.display = "block";
 
       // Show a random message on the selected card
@@ -76,11 +83,25 @@
       const resultContainer = document.getElementById("resultContainer");
       const cards = document.querySelectorAll(".card");
 
-      // Hide the result container
       resultContainer.style.display = "none";
 
-      // Show all cards again
       cards.forEach((card) => {
+        const cardNumber = card.getAttribute("data-card-number");
         card.style.display = "block";
+        card.setAttribute("onclick", `showCard(${cardNumber})`); // Restore the onclick event with the correct card number
       });
+    }
+
+    // Call the function to shuffle and hide the cards when the page loads
+    window.addEventListener("load", () => {
+      shuffleCards();
+      hideCards();
+    });
+
+    // Function to shuffle the cards randomly
+    function shuffleCards() {
+      const cardsContainer = document.querySelector(".card-container");
+      for (let i = cardsContainer.children.length; i >= 0; i--) {
+        cardsContainer.appendChild(cardsContainer.children[Math.random() * i | 0]);
+      }
     }
