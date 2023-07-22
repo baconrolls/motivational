@@ -1,6 +1,8 @@
 const cards = document.querySelectorAll('.card');
 const resultContainer = document.getElementById('result');
 const resultMessage = document.getElementById('resultMessage');
+const indexTitle = document.getElementById('index-title');
+
 
 function shuffleCards() {
   // Shuffle the cards array using the Fisher-Yates algorithm
