@@ -27,7 +27,6 @@
 }
 
 /* Apply some basic styles to the button */
-/* Apply some basic styles to the button */
 .back-button {
   background-color: #4CAF50;
   color: white;
@@ -39,6 +38,7 @@
   transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
   justify-content: center;
   align-items: center;
+  text-transform:uppercase;
 }
 
 /* On hover, change the background color to a darker shade */
@@ -75,7 +75,7 @@ p{
 }
 /* Other existing styles */
 
-#resultMessage, button#back-button.back-button {
+#resultMessage{
   color: #000;
   text-align:center;
 }
