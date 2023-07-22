@@ -31,7 +31,7 @@ h1 {
 
 .card {
   width: 200px;
-  height: auto;
+  height: 300px;
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
