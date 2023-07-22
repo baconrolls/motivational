@@ -30,22 +30,36 @@
 ];
 
 
-    function hideCards() {
-      const cards = document.querySelectorAll(".card");
-      cards.forEach((card, index) => {
-        card.style.display = "none";
-        card.setAttribute("data-card-number", index + 1); // Store card number as a data attribute
+    // Function to shuffle the cards randomly
+    function shuffleCards() {
+      const cardsContainer = document.querySelector(".card-container");
+      const cards = Array.from(cardsContainer.children);
+
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+
+      cards.forEach((card) => {
+        cardsContainer.appendChild(card);
       });
     }
+
+    // Call the function to shuffle the cards when the page loads
+    window.addEventListener("load", shuffleCards);
 
     function showCard(cardNumber) {
       const resultContainer = document.getElementById("resultContainer");
       const resultMessage = document.getElementById("resultMessage");
 
-      hideCards();
+      // Hide all cards
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card) => {
+        card.style.display = "none";
+      });
 
       // Show the selected card
-      const selectedCard = document.querySelector(`.card[data-card-number="${cardNumber}"]`);
+      const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
       selectedCard.style.display = "block";
 
       // Show a random message on the selected card
@@ -63,22 +77,8 @@
       // Hide the result container
       resultContainer.style.display = "none";
 
+      // Show all cards again
       cards.forEach((card) => {
         card.style.display = "block";
-        card.setAttribute("onclick", `showCard(${card.getAttribute("data-card-number")})`); // Restore the onclick event with the correct card number
       });
-    }
-
-    // Call the function to shuffle and hide the cards when the page loads
-    window.addEventListener("load", () => {
-      shuffleCards();
-      hideCards();
-    });
-
-    // Function to shuffle the cards randomly
-    function shuffleCards() {
-      const cardsContainer = document.querySelector(".card-container");
-      for (let i = cardsContainer.children.length; i >= 0; i--) {
-        cardsContainer.appendChild(cardsContainer.children[Math.random() * i | 0]);
-      }
     }
