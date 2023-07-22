@@ -1,28 +1,33 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <!-- Your meta tags and other head elements -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarot Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
-    <h1 id="index-title">Positive Things to Do</h1>
-    <!-- Your card deck -->
-    <div id="deck" class="deck">
-      <!-- Your card elements -->
-    </div>
-    <!-- Your result container -->
-    <div class="result-container" style="display: none;">
-      <div id="selectedCard" class="selected-card"></div>
-      <div id="resultMessage">
-        <h1 id="result-heading">Result</h1>
-        <p id="result-text"></p>
+    <h1>Tarot Game: Select a Card</h1>
+    <div class="deck">
+      <div class="card" onclick="showCard(1)">
+        <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 1">
       </div>
-      <button class="back-button" onclick="backToMain()">Back to Main</button>
+      <div class="card" onclick="showCard(2)">
+        <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 2">
+      </div>
+      <div class="card" onclick="showCard(3)">
+        <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 3">
+      </div>
+    </div>
+    <div class="result-container" id="resultContainer">
+      <p id="resultMessage"></p>
+      <button onclick="backToMain()">Back to Main</button>
     </div>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
