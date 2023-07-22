@@ -73,7 +73,7 @@ p{
 }
 /* Other existing styles */
 
-#resultMessage {
+#resultMessage, button {
   color: #000;
   text-align:center;
 }
