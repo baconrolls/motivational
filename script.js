@@ -1,5 +1,3 @@
-// script.js
-
 const cards = document.querySelectorAll('.card');
 const resultContainer = document.querySelector('.result-container');
 const selectedCard = document.getElementById('selectedCard');
