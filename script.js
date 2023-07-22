@@ -4,6 +4,7 @@ const cards = document.querySelectorAll('.card');
 const resultContainer = document.querySelector('.result-container');
 const selectedCard = document.getElementById('selectedCard');
 const resultMessage = document.getElementById('result-text');
+const resultHeading = document.getElementById('result-heading');
 const indexTitle = document.getElementById('index-title');
 
 function shuffleCards() {
@@ -74,4 +75,3 @@ function backToMain() {
   indexTitle.style.display = 'block';
   resultContainer.style.display = 'none';
 }
-
