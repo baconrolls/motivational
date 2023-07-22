@@ -62,8 +62,9 @@
   animation: pulse 0.3s;
 }
 
-.result-container {
+div#resultContainer.result-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top:20px;
 }
