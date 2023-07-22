@@ -24,6 +24,15 @@
   height: 100%;
   object-fit: cover;
 }
+.card:nth-child(n + 2) {
+      transform: translate(-20px, -40px);
+      z-index: 1;
+    }
+
+    .card:nth-child(n + 3) {
+      transform: translate(-40px, -80px);
+      z-index: 2;
+    }
 
 .active {
   transform: translateY(-10px);
