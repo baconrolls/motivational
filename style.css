@@ -25,3 +25,19 @@
 .active {
   transform: translateY(-10px);
 }
+
+/* Apply some basic styles to the button */
+.back-button {
+  background-color: #4CAF50; /* Green background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add some padding to the button */
+  font-size: 16px; /* Font size of the button text */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 5px; /* Add some border-radius for rounded corners */
+}
+
+/* On hover, change the background color to a darker shade */
+.back-button:hover {
+  background-color: #45a049;
+}
