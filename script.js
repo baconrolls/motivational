@@ -28,30 +28,23 @@ function revealCard(cardNumber) {
   // Determine the result based on the card number
   let result;
   if (cardNumber === 1) {
-    result = `
-      <h1>Practice Gratitude</h1>
-      <p>Take a few moments each day to reflect on the things you are grateful for. 
-      Keeping a gratitude journal or simply expressing appreciation for the little things can help shift your focus to the positive aspects of your life.</p>`;
+    resultHeading.textContent = "Practice Gratitude";
+    result = "Take a few moments each day to reflect on the things you are grateful for. Keeping a gratitude journal or simply expressing appreciation for the little things can help shift your focus to the positive aspects of your life.";
   } else if (cardNumber === 2) {
-    result = `
-      <h1>Spread Kindness</h1>
-      <p>Perform random acts of kindness for others, whether it's helping a stranger, complimenting a friend, or volunteering for a cause you care about. Kindness not only benefits others but also brings joy to your own heart.</p>`;
+    resultHeading.textContent = "Spread Kindness";
+    result = "Perform random acts of kindness for others, whether it's helping a stranger, complimenting a friend, or volunteering for a cause you care about. Kindness not only benefits others but also brings joy to your own heart.";
   } else if (cardNumber === 3) {
-    result = `
-      <h1>Stay Active</h1>
-      <p>Engage in regular physical activity that you enjoy, whether it's going for a walk, dancing, or playing a sport. Exercise releases endorphins, which can boost your mood and overall well-being.</p>`;
+    resultHeading.textContent = "Stay Active";
+    result = "Engage in regular physical activity that you enjoy, whether it's going for a walk, dancing, or playing a sport. Exercise releases endorphins, which can boost your mood and overall well-being.";
   } else if (cardNumber === 4) {
-    result = `
-      <h1>Connect with Loved Ones</h1>
-      <p>Spend quality time with family and friends, either in person or through virtual means. Building and maintaining strong relationships can provide emotional support and a sense of belonging.</p>`;
+    resultHeading.textContent = "Connect with Loved Ones";
+    result = "Spend quality time with family and friends, either in person or through virtual means. Building and maintaining strong relationships can provide emotional support and a sense of belonging.";
   } else if (cardNumber === 5) {
-    result = `
-      <h1>Practice Mindfulness</h1>
-      <p>Take time to be present in the moment and practice mindfulness. Whether it's through meditation, deep breathing, or mindful activities like coloring or gardening, being mindful can reduce stress and increase feelings of calmness.</p>`;
+    resultHeading.textContent = "Practice Mindfulness";
+    result = "Take time to be present in the moment and practice mindfulness. Whether it's through meditation, deep breathing, or mindful activities like coloring or gardening, being mindful can reduce stress and increase feelings of calmness.";
   } else if (cardNumber === 6) {
-    result = `
-      <h1>Pursue Your Passions</h1>
-      <p>Engage in activities that bring you joy and fulfillment. Whether it's pursuing a hobby, learning something new, or working towards a personal goal, following your passions can lead to a greater sense of purpose and satisfaction.</p>`;
+    resultHeading.textContent = "Pursue Your Passions";
+    result = "Engage in activities that bring you joy and fulfillment. Whether it's pursuing a hobby, learning something new, or working towards a personal goal, following your passions can lead to a greater sense of purpose and satisfaction.";
   }
 
   // Display the result message
