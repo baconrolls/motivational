@@ -55,6 +55,7 @@
       const cards = document.querySelectorAll(".card");
       cards.forEach((card) => {
         card.style.display = "none";
+        card.setAttribute("data-card-number", index + 1); // Store card number as a data attribute
       });
 
       // Show the selected card
