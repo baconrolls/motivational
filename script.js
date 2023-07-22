@@ -31,7 +31,16 @@ function showCard(cardNumber) {
   // Show the result container
   resultContainer.style.display = "block";
 }
+function backToMain() {
+  const resultContainer = document.getElementById("resultContainer");
+  const cards = document.querySelectorAll(".card");
 
+  // Hide the "Back to Main" button on the main page
+  document.getElementById("back-button").style.display = "none";
+// Show the "Back to Main" button on the result page
+  document.getElementById("back-button").style.display = "block";
+
+  
 // Function to shuffle the cards randomly
 function shuffleCards() {
   const cardsContainer = document.querySelector(".card-container");
