@@ -2,21 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Positive Game</title>
+  <!-- Your meta tags and other head elements -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
- <header>
-    <h1 id="index-title">Select a Card</h1>
-  </header>
-
-  <main>
-    <div id="deck" class="card-container">
-     <div class="card" onclick="revealCard(1)">
+  <div class="container">
+    <h1 id="index-title">Positive Things to Do</h1>
+    <!-- Your card deck -->
+    <div id="deck" class="deck">
+      <div class="card" onclick="revealCard(1)">
         <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 1">
       </div>
       <div class="card" onclick="revealCard(2)">
@@ -32,19 +31,21 @@
         <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 5">
       </div>
       <div class="card" onclick="revealCard(6)">
-        <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 6">
+        <img src
+    </div>
+    <!-- Your result container -->
+    <div class="result-container" style="display: none;">
+      <div id="selectedCard" class="selected-card"></div>
+      <div id="resultMessage">
+        <h1 id="result-heading">Result</h1>
+        <p id="result-text"></p>
       </div>
+      <button class="back-button" onclick="backToMain()">Back to Main</button>
     </div>
-
-    <div class="result-container" id="resultContainer">
-      <div id="selectedCard"></div>
-      <div id="resultMessage"></div>
-      <button onclick="backToMain()">Back to Main</button>
-    </div>
-  </main>
-    
+  </div>
   <script src="script.js"></script>
 </body>
+</html>
 
 </html>
 
