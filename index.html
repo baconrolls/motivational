@@ -10,9 +10,12 @@
 </head>
 
 <body>
-  <div class="container">
+ <header>
     <h1 id="index-title">Select a Card</h1>
-    <div class="deck" id="deck">
+  </header>
+
+  <main>
+    <div id="deck" class="card-container">
      <div class="card" onclick="revealCard(1)">
         <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 1">
       </div>
@@ -32,12 +35,14 @@
         <img src="https://i.giphy.com/media/X4q06Dk9MBeQ5UvDlL/giphy.webp" alt="Card 6">
       </div>
     </div>
-    <div class="result-container" id="result" style="display: none;">
-      <div id="selectedCard" class="selected-card"></div>
-      <div class="result-message" id="resultMessage"></div>
-      <div class="back-button" <button onclick="backToMain()">Back to Main</button></div>
+
+    <div class="result-container" id="resultContainer">
+      <div id="selectedCard"></div>
+      <div id="resultMessage"></div>
+      <button onclick="backToMain()">Back to Main</button>
     </div>
-  </div>
+  </main>
+    
   <script src="script.js"></script>
 </body>
 
