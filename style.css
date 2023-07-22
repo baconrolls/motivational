@@ -79,6 +79,6 @@ p{
   color: #000;
   text-align:center;
 }
-#resultContainer #result-title {
+#resultContainer #result-title, .container button  {
   display: none;
 }
