@@ -25,10 +25,11 @@ body {
   object-fit: cover;
 }
 
-#resultContainer div.card-container img {
-  min-width: 200px;
+#resultContainer .card {
+  max-width: 300px; /* Adjust the width as needed for the result view */
   height: auto;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .active {
