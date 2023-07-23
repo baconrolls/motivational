@@ -26,8 +26,8 @@ body {
 }
 
 #resultContainer .card img {
-  width: 200px;
-  height: 300px;
+  max-width: 200px;
+  height: auto;
   object-fit: cover;
 }
 
