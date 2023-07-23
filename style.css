@@ -101,7 +101,4 @@ p {
   font-style: italic;
   line-height: 1.6em;
 }
-}
-a {
-  text-decoration: none;
-}
+a { text-decoration: none;color:black}
