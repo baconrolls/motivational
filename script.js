@@ -104,6 +104,8 @@
     function backToMain() {
       const resultContainer = document.getElementById("resultContainer");
       const cards = document.querySelectorAll(".card");
+        // Redirect to the index page
+  window.location.href = "index.html";
 
       // Hide the result container
       resultContainer.style.display = "none";
@@ -114,4 +116,6 @@
           // Reattach the showCard function to the card images
       card.setAttribute("onclick");
       });
+        
+
     }
