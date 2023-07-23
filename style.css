@@ -9,13 +9,12 @@ body {
 
 .card-container {
   display: grid;
-  grid-template-columns: repeat(3,auto);
+  grid-template-columns: repeat(3, auto);
   gap: 20px;
   max-width: 700px;
-    }
+}
 
 .card {
-  
   transition: transform 0.3s ease;
 }
 
@@ -25,8 +24,8 @@ body {
   object-fit: cover;
 }
 
-#resultContainer .card {
-  max-width: 300px; /* Adjust the width as needed for the result view */
+#resultContainer .card-container .card img {
+  width: 200px; /* Adjust the width as needed for the result view */
   height: auto;
   object-fit: cover;
   border-radius: 10px;
@@ -48,7 +47,7 @@ body {
   transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
   justify-content: center;
   align-items: center;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 
 /* On hover, change the background color to a darker shade */
@@ -78,21 +77,27 @@ div#resultContainer.result-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top:20px;
+  margin-top: 20px;
 }
-p{
-  font-size:2em;
+
+p {
+  font-size: 2em;
 }
+
 /* Other existing styles */
 
-#resultMessage{
+#resultMessage {
   color: #000;
-  text-align:center;
+  text-align: center;
 }
- /* Add this CSS code to center the "Back to Main" button */
-    #resultContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;}
-a{text-decoration:none}
+
+/* Add this CSS code to center the "Back to Main" button */
+#resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
