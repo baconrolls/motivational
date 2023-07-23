@@ -20,13 +20,13 @@ body {
 }
 
 .card img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: cover;
 }
 
 #resultContainer .card img {
-  max-width: 200px;
+  min-width: 200px;
   height: auto;
   object-fit: cover;
 }
