@@ -72,8 +72,10 @@
       });
     }
 
-    // Call the function to shuffle the cards when the page loads
-    window.addEventListener("load", shuffleCards);
+    // Call the function to shuffle the cards after a brief delay when the page loads
+    window.addEventListener("load", () => {
+      setTimeout(shuffleCards, 1000); // Adjust the delay (in milliseconds) as needed
+    });
 
     function showCard(cardNumber) {
       const resultContainer = document.getElementById("resultContainer");
