@@ -5,7 +5,7 @@
 }
 .card-container {
       justify-content: center;
-      
+      max-width:600px;
   grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
   justify-content: center;
