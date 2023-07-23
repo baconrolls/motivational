@@ -102,20 +102,20 @@
     }
 
     function backToMain() {
-      const resultContainer = document.getElementById("resultContainer");
-      const cards = document.querySelectorAll(".card");
-        // Redirect to the index page
+  // Redirect to the index page
   window.location.href = "index.html";
 
-      // Hide the result container
-      resultContainer.style.display = "none";
+  const resultContainer = document.getElementById("resultContainer");
+  const cards = document.querySelectorAll(".card");
 
-      // Show all cards again
-      cards.forEach((card) => {
-        card.style.display = "block";
-          // Reattach the showCard function to the card images
-      card.setAttribute("onclick");
-      });
-        
+  // Hide the result container
+  resultContainer.style.display = "none";
 
-    }
+  // Show all cards again
+  cards.forEach((card) => {
+    card.style.display = "block";
+    // Reattach the showCard function to the card images
+    card.setAttribute("onclick", "showCard(" + card.dataset.cardNumber + ")");
+  });
+}
+
