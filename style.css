@@ -25,7 +25,7 @@ body {
   object-fit: cover;
 }
 
-#resultContainer .card img {
+#resultContainer div.card-container img {
   min-width: 200px;
   height: auto;
   object-fit: cover;
