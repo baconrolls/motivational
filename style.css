@@ -2,13 +2,14 @@
 
 .deck {
       
+}
+.card-container {
+      justify-content: center;
+      
   grid-template-columns: repeat(2, 1fr);
     grid-gap: 15px;
   justify-content: center;
   align-items: center;
-}
-.card-container {
-      justify-content: center;
     }
 
 .card {
