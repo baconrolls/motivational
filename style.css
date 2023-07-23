@@ -26,8 +26,9 @@ body {
 }
 
 #resultContainer .card img {
-  width: 60%; /* Adjust the width as needed */
-  border-radius: 10px;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
 }
 
 .active {
