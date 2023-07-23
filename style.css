@@ -25,7 +25,7 @@ body {
   object-fit: cover;
 }
 
-#resultContainer img {
+#resultContainer .card img {
   width: 60%; /* Adjust the width as needed */
   border-radius: 10px;
 }
