@@ -75,7 +75,7 @@
     // Call the function to shuffle the cards when the page loads
     window.addEventListener("load", shuffleCards);
 
-   function showCard(cardNumber) {
+function showCard(cardNumber) {
   const resultContainer = document.getElementById("resultContainer");
   const resultMessage = document.getElementById("resultMessage");
 
@@ -102,12 +102,8 @@
   if (cardNumber === 1) {
     // Adjust the size of the image in the result view
     const resultImage = document.getElementById("resultImage");
-    const newWidth = 200; // Adjust the width as needed
-    const newHeight = 150; // Adjust the height as needed
-    resultImage.style.width = newWidth + "px";
-    resultImage.style.height = newHeight + "px";
     // Set the source of the result image to the corresponding card image source
-    const selectedCardImageSrc = selectedCard.getAttribute("src");
+    const selectedCardImageSrc = selectedCard.querySelector("img").getAttribute("src");
     resultImage.setAttribute("src", selectedCardImageSrc);
   }
 }
