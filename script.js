@@ -53,8 +53,8 @@
   "Prioritize your mental and emotional well-being.",
   "Take time to reflect on your personal growth and progress.",
   "Remember that it's okay to ask for help and support.",
-  "Practice positive affirmations to boost your self-confidence.",
 ];
+
 
 
     // Function to shuffle the cards randomly
@@ -75,38 +75,29 @@
     // Call the function to shuffle the cards when the page loads
     window.addEventListener("load", shuffleCards);
 
-function showCard(cardNumber) {
-  const resultContainer = document.getElementById("resultContainer");
-  const resultMessage = document.getElementById("resultMessage");
+    function showCard(cardNumber) {
+      const resultContainer = document.getElementById("resultContainer");
+      const resultMessage = document.getElementById("resultMessage");
 
-  // Hide all cards
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
-    card.style.display = "none";
-    // Remove the onclick event from the card images
-    card.removeAttribute("onclick");
-  });
+      // Hide all cards
+      const cards = document.querySelectorAll(".card");
+      cards.forEach((card) => {
+        card.style.display = "none";
+     // Remove the onclick event from the card images
+        card.removeAttribute("onclick");
+      });
 
-  // Show the selected card
-  const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
-  selectedCard.style.display = "block";
+      // Show the selected card
+      const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
+      selectedCard.style.display = "block";
 
-  // Show a random message on the selected card
-  const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-  resultMessage.textContent = randomMessage;
+      // Show a random message on the selected card
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      resultMessage.textContent = randomMessage;
 
-  // Show the result container
-  resultContainer.style.display = "block";
-
-  // Check if it's the result view (e.g., cardNumber is 1)
-  if (cardNumber === 1) {
-    // Adjust the size of the image in the result view
-    const resultImage = document.getElementById("resultImage");
-    // Set the source of the result image to the corresponding card image source
-    const selectedCardImageSrc = selectedCard.querySelector("img").getAttribute("src");
-    resultImage.setAttribute("src", selectedCardImageSrc);
-  }
-}
+      // Show the result container
+      resultContainer.style.display = "block";
+    }
 
     function backToMain() {
       const resultContainer = document.getElementById("resultContainer");
