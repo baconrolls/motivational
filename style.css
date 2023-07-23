@@ -9,11 +9,10 @@ body {
 }
 
 .card-container {
-  max-width:600px;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 15px;
-  margin:0 auto;
+  gap: 20px;
+  max-width: 600px;
     }
 
 .card {
