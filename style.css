@@ -25,7 +25,7 @@ body {
 }
 
 /* CSS to style the size of the selected card */
-#resultContainer .card {
+#resultContainer .card img {
   /* Adjust the width and height as needed */
   width: 300px;
   height: 400px;
