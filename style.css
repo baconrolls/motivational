@@ -68,6 +68,8 @@ body {
   animation: pulse 0.3s;
 }
 
+h2#result-title{font-family: 'GoodDogNewW00-Regular';text-align:left}
+
 div#resultContainer.result-container {
   display: flex;
   justify-content: center;
