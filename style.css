@@ -1,3 +1,5 @@
+@font-face {font-family: "GoodDogNewW00-Regular"; src: url("//db.onlinewebfonts.com/t/ca32b369590c4b105ed8cbdf1f8da722.eot"); src: url("//db.onlinewebfonts.com/t/ca32b369590c4b105ed8cbdf1f8da722.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/ca32b369590c4b105ed8cbdf1f8da722.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/ca32b369590c4b105ed8cbdf1f8da722.woff") format("woff"), url("//db.onlinewebfonts.com/t/ca32b369590c4b105ed8cbdf1f8da722.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/ca32b369590c4b105ed8cbdf1f8da722.svg#GoodDogNewW00-Regular") format("svg"); }
+
 body {
   display: flex;
   flex-direction: column;
