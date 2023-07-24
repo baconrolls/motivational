@@ -109,9 +109,3 @@ a { text-decoration:none; color:black}
   margin: 0 auto;
 }
 
-/* For smaller screens, show 2 cards in a row */
-@media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: repeat(2, auto);
-  }
-}
