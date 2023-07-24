@@ -97,7 +97,7 @@
       const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
       selectedCard.style.display = "block";
          // Resize the selected card's image
-  const imageSize = "300px"; // Adjust the size as needed
+  const imageSize = "350px"; // Adjust the size as needed
   selectedCard.querySelector("img").style.width = imageSize;
   selectedCard.querySelector("img").style.height = "auto";
         
