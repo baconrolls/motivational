@@ -104,6 +104,9 @@
       // Show the result container
       resultContainer.style.display = "block";
     }
+// Hide the page title in the result view
+  const pageTitle = document.querySelector("title");
+  pageTitle.style.display = "none";
 
     function backToMain() {
   // Redirect to the index page
