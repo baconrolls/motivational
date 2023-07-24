@@ -106,7 +106,6 @@
   selectedCard.querySelector("img").style.transform = transform;
 
         // Center the image
-      const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
       const image = selectedCard.querySelector("img");
       const horizontalOffset = (selectedCard.clientWidth - image.width) / 2;
       const verticalOffset = (selectedCard.clientHeight - image.height) / 2;
