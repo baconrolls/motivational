@@ -79,7 +79,7 @@ div#resultContainer.result-container {
 }
 
 p {
-  font-size: 2em;
+  font-size: 2em; font-weight:300;
 }
 
 /* Other existing styles */
