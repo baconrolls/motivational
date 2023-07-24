@@ -105,6 +105,14 @@
   // Remove the transform effect (zoom) by setting it to "none"
   selectedCard.querySelector("img").style.transform = transform;
 
+        // Center the image
+      const selectedCard = document.querySelector(`.card:nth-child(${cardNumber})`);
+      const image = selectedCard.querySelector("img");
+      const horizontalOffset = (selectedCard.clientWidth - image.width) / 2;
+      const verticalOffset = (selectedCard.clientHeight - image.height) / 2;
+      image.style.left = horizontalOffset + "px";
+      image.style.top = verticalOffset + "px";
+
       // Show a random message on the selected card
       const randomMessage = messages[Math.floor(Math.random() * messages.length)];
       resultMessage.textContent = randomMessage;
