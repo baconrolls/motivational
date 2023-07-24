@@ -48,7 +48,7 @@ body {
 
 /* On hover, change the background color to a darker shade */
 .back-button:hover {
-  background-color:#33DDDC;
+  background-color:#43DDDC;
 }
 
 /* Keyframe animation for pulsing effect */
@@ -69,7 +69,7 @@ body {
   animation: pulse 0.3s;
 }
 
-h2{font-family: 'GoodDogNewW00-Regular';text-align:left; align-items: left; font-size: 1.5em; color: #33DDCF}
+h2{font-family: 'GoodDogNewW00-Regular';text-align:left; align-items: left; font-size: 1.5em; color:#D660BE;}
 
 div#resultContainer.result-container {
   display: flex;
@@ -88,7 +88,7 @@ p {
   text-align: center;
   font-family:'GoodDogNewW00-Regular';
   font-weight:300;
-  color: #EA5C6F;
+  color: #D660BE;
 }
 
 /* Add this CSS code to center the "Back to Main" button */
