@@ -81,6 +81,10 @@
       const resultContainer = document.getElementById("resultContainer");
       const resultMessage = document.getElementById("resultMessage");
 
+      // Hide the <h2> element in the result view
+  const resultTitle = document.getElementById("result-title");
+  resultTitle.style.display = "none";
+
       // Hide all cards
       const cards = document.querySelectorAll(".card");
       cards.forEach((card) => {
@@ -104,9 +108,6 @@
       // Show the result container
       resultContainer.style.display = "block";
     }
-// Hide the page title in the result view
-  const pageTitle = document.querySelector("title");
-  pageTitle.style.display = "none";
 
     function backToMain() {
   // Redirect to the index page
