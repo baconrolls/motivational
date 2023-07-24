@@ -22,19 +22,13 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
-/* CSS to style the size of the selected card */
-#resultContainer .card img {
-  /* Adjust the width and height as needed */
-  width: 300px;
-  height: 400px;
+.card img:hover {
+  transform: scale(1.1); /* Zoom in the image by 10% when hovering */
 }
 
-
-.active {
-  transform: translateY(-10px);
-}
 
 /* Apply some basic styles to the button */
 .back-button {
