@@ -6,7 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   height: ;
-  margin: 0; background:#f2f2f9;
+  margin: 0;
 }
 
 .card-container {
@@ -107,4 +107,14 @@ a { text-decoration:none; color:black}
   display: block;
   margin: 0 auto;
 }
-
+ :root {
+    --dark.bg: #000000;
+    --dark1.bg: #080808;
+    --dark2.bg: #101010;
+    --dark.main.color: #f75505;
+    --dark.title: #f8f6f4;
+    --dark.text: #ffffff;
+    --dark.meta: #aeaeae;
+    --dark.btn: #000000;
+    /* Add more variables here if needed */
+  }
