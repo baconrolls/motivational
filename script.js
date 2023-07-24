@@ -100,6 +100,10 @@
   const imageSize = "300px"; // Adjust the size as needed
   selectedCard.querySelector("img").style.width = imageSize;
   selectedCard.querySelector("img").style.height = "auto";
+        
+        const transform = "none";
+  // Remove the transform effect (zoom) by setting it to "none"
+  selectedCard.querySelector("img").style.transform = transform;
 
       // Show a random message on the selected card
       const randomMessage = messages[Math.floor(Math.random() * messages.length)];
